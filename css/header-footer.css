@@ -1,0 +1,175 @@
+/* MEMBER 4: header, navigation and footer styles */
+
+/* ---------- Header ---------- */
+header,
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #4c2889;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+body.dark header,
+body.dark .site-header,
+[data-theme="dark"] header,
+[data-theme="dark"] .site-header {
+  background: #2a1d4d;
+}
+
+.header-inner,
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.9rem 1.25rem;
+}
+
+/* logo:  Team<span>Code</span> */
+.logo {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #c4b2f7;
+}
+
+/* ---------- Navigation ---------- */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-links a {
+  position: relative;
+  padding: 0.2rem 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+/* underline for the active link (JS adds .active) */
+.nav-links a.active {
+  opacity: 1;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* ---------- Dark-mode toggle button ---------- */
+.theme-toggle,
+#theme-toggle {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.theme-toggle:hover,
+#theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ---------- Hamburger (hidden on desktop) ---------- */
+.menu-toggle,
+#menu-toggle {
+  display: none;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #fff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------- Footer ---------- */
+footer,
+.site-footer {
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  font-size: 0.78rem;
+  color: #fff;
+  background: #1f2233;
+}
+
+footer p,
+.site-footer p {
+  margin: 0.2rem 0;
+}
+
+footer a,
+.site-footer a {
+  color: #a58bf0;
+  text-decoration: none;
+}
+
+footer a:hover,
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Mobile menu ---------- */
+@media (max-width: 640px) {
+  .menu-toggle,
+  #menu-toggle {
+    display: block;
+    order: 3;
+  }
+
+  .navbar,
+  .header-inner {
+    flex-wrap: wrap;
+  }
+
+  /* collapsed by default; JS adds .open */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    order: 4;
+    gap: 0.75rem;
+    padding: 1rem 0 0.5rem;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+}

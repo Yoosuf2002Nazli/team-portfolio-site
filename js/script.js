@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+// MEMBER 3: all JavaScript interactivity
+=======
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector("#nav.nav");
@@ -56,3 +59,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+>>>>>>> 407c8ae8b72557b6f8b4a89c9cd1376b1220e591
