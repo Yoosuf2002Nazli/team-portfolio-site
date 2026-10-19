@@ -36,7 +36,7 @@
       </div>
       <div class="hero-faces" aria-hidden="true">
         <span class="face f1">YN</span>
-        <span class="face f2">AS</span>
+        <span class="face f2">MH</span>
         <span class="face f3">RK</span>
         <span class="face f4">MP</span>
       </div>
@@ -63,10 +63,10 @@
           <p>Turns designs into fast, responsive pages and keeps the project on schedule.</p>
         </article>
         <article class="member">
-          <div class="avatar a2">AS</div>
-          <h3>Member Two</h3>
-          <p class="role">UI/UX designer</p>
-          <p>Plans layouts, colours and user flows in Figma before any code is written.</p>
+          <div class="avatar a2">MH</div>
+          <h3>Hijaz Hafeel</h3>
+          <p class="role">JavaScript Developer </p>
+          <p>Plans layouts, colourfull interactive website.</p>
         </article>
         <article class="member">
           <div class="avatar a3">RK</div>
@@ -109,7 +109,7 @@
     <section id="contact" class="section contact">
       <h2>Contact us</h2>
       <p>Have a project in mind? Send us a message and we'll reply within two days.</p>
-      <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('.form-note').textContent = 'Message sent. Thank you!';">
+      <form class="contact-form">
         <label>Name
           <input type="text" name="name" required>
         </label>
@@ -130,19 +130,6 @@
     <p>&copy; 2026 Team Nova. All rights reserved.</p>
   </footer>
 
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav');
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open);
-    });
-    nav.querySelectorAll('a').forEach(link =>
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', false);
-      })
-    );
-  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
